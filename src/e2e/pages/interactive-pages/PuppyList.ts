@@ -11,6 +11,7 @@ export default new class PuppyList extends InteractivePage {
         ['view details button for the puppy called Hanna', PuppyList.geViewDetailsSelectorFor('Hanna')],
         ['view details button for the puppy called Twinkie', PuppyList.geViewDetailsSelectorFor('Twinkie')],
         ['view details button for the puppy called Spud', PuppyList.geViewDetailsSelectorFor('Spud')],
+        ['view details button for the puppy called Maggie Mae', PuppyList.geViewDetailsSelectorFor('Maggie Mae')],
         ['the puppy named Maggie May', '//*[contains(text(),"Maggie Mae")]'],
         ['current page number', '.current'],
         ['puppies names on list', '.name'],
