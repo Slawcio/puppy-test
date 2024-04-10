@@ -1,5 +1,5 @@
 @puppy @s5
-Feature: Puppy List -> Puppy details: Adopt puppy and change mind
+Feature: Puppy List -> Puppy details -> Adoption Summary: Adopt puppy and change mind
 
   Scenario: View details for Spud, adopt and then change mind
     Given I am on puppy list page

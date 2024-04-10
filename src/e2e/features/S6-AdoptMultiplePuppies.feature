@@ -1,5 +1,5 @@
 @puppy @s6
-Feature: Puppy List -> Puppy details: Adopt multiple puppies
+Feature: Puppy List -> Puppy details -> Adoption Summary: Adopt multiple puppies
 
   Scenario: Adopt Hanna and then Maggie Mae
     Given I am on puppy list page

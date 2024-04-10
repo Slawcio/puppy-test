@@ -1,13 +1,14 @@
-import { InteractivePage } from "../InteractivePage.js";
+import { InteractivePage } from "../interactivePage.js";
 import { Selector } from "webdriverio"
-import { Utils } from '../../../utilities/Utils.js';
-import { ElementActions } from '../../../utilities/ElementActions.js';
+import { Utils } from '../../../utilities/utils.js';
+import { ElementActions } from '../../../utilities/elementActions.js';
 
 export default new class PuppyList extends InteractivePage {
 
     protected readonly pageName: string = "puppy list page";
     protected readonly locatorsMap: Map<string, Selector> = new Map([
         [this.pageName,'//h2[contains(text(), "Puppy List")]'],
+        ['any view details button', '[value="View Details"]'],
         ['view details button for the puppy called Hanna', PuppyList.geViewDetailsSelectorFor('Hanna')],
         ['view details button for the puppy called Twinkie', PuppyList.geViewDetailsSelectorFor('Twinkie')],
         ['view details button for the puppy called Spud', PuppyList.geViewDetailsSelectorFor('Spud')],
@@ -16,7 +17,8 @@ export default new class PuppyList extends InteractivePage {
         ['current page number', '.current'],
         ['puppies names on list', '.name'],
         ['second page pagination number','[aria-label="Page 2"]'],
-        ['next page pagination button','.next_page:not(.disabled)']
+        ['next page pagination button','.next_page:not(.disabled)'],
+        ['confirmation info', '#notice']
     ]);
 
     private static geViewDetailsSelectorFor(puppyName: string): string{

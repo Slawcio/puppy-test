@@ -1,4 +1,4 @@
-import { InteractivePage } from '../InteractivePage.ts';
+import { InteractivePage } from '../interactivePage.js';
 import { Selector } from 'webdriverio';
 
 export default new class AdoptionConfirmation extends InteractivePage {
@@ -7,6 +7,7 @@ export default new class AdoptionConfirmation extends InteractivePage {
         [this.pageName,'//*[contains(text(),"Your Litter")]'],
         ['Change Your Mind button','[value="Change your mind"]'],
         ['Adopt Another Puppy button', '[value="Adopt Another Puppy"]'],
+        ['Complete the Adoption button', '[value="Complete the Adoption"]'],
         ['adoption summary puppy names', 'tr:not(.total_line) td:nth-child(2) h2']
     ]);
 }
