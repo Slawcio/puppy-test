@@ -1,5 +1,5 @@
 @puppy @s2
-Feature: Verify puppy presence on first page
+Feature: Puppy List: Verify Maggie Mae presence on first page
 
   Scenario: Verify Maggie May is on the first page
     Given I am on puppy list page

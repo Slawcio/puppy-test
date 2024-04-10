@@ -23,10 +23,11 @@ export class ElementActions {
         return resultElements;
     }
 
-    public static async clickElement(elementName: string) {
-        const element: WebdriverIO.Element = await ElementActions.getElement(elementName);
+    public static async clickElement(selectorName: string) {
+        const element: WebdriverIO.Element = await ElementActions.getElement(selectorName);
         await element.scrollIntoView({ block: 'center', inline: 'center' });
         await element.waitForClickable();
         await element.click();
     }
+
 }
