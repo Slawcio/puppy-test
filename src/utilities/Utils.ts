@@ -12,8 +12,6 @@ export class Utils {
                 texts.push(''); // Push an empty string in case of an error
             }
         }
-
-        console.debug("texts", texts);
         return texts.join('; ');
     }
 

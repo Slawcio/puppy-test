@@ -1,11 +1,6 @@
-import { Given, When, Then } from '@wdio/cucumber-framework';
-import puppyList from "../pages/interactive-pages/PuppyList.js";
+import { When, Then } from '@wdio/cucumber-framework';
 import { ElementActions } from "../../utilities/ElementActions.js";
 import { Utils } from '../../utilities/Utils.js';
-
-Given('I am on puppy list page', async () => {
-    await puppyList.open('/'); // could be parametrized later on
-});
 
 When('I click {string}', async (selectorName: string) => {
     await ElementActions.clickElement(selectorName);
