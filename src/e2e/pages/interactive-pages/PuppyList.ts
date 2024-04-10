@@ -5,17 +5,22 @@ import { ElementActions } from '../../../utilities/ElementActions.js';
 
 export default new class PuppyList extends InteractivePage {
 
-    protected pageName: string = "puppy list";
+    protected readonly pageName: string = "puppy list page";
     protected readonly locatorsMap: Map<string, Selector> = new Map([
         [this.pageName,'//h2[contains(text(), "Puppy List")]'],
-        ['view details for the puppy named Hanna', '//*[contains(text(),"Hanna")]/parent::*//following-sibling::*[@class="view"]'],
-        ['view details for the puppy named Twinkie','//*[contains(text(),"Twinkie")]/parent::*//following-sibling::*[@class="view"]'],
+        ['view details button for the puppy called Hanna', PuppyList.geViewDetailsSelectorFor('Hanna')],
+        ['view details button for the puppy called Twinkie', PuppyList.geViewDetailsSelectorFor('Twinkie')],
+        ['view details button for the puppy called Spud', PuppyList.geViewDetailsSelectorFor('Spud')],
         ['the puppy named Maggie May', '//*[contains(text(),"Maggie Mae")]'],
         ['current page number', '.current'],
         ['puppies names on list', '.name'],
-        ['the second page','[aria-label="Page 2"]'],
-        ['next page button','.next_page:not(.disabled)']
+        ['second page pagination number','[aria-label="Page 2"]'],
+        ['next page pagination button','.next_page:not(.disabled)']
     ]);
+
+    private static geViewDetailsSelectorFor(puppyName: string): string{
+        return `//*[contains(text(),"${puppyName}")]/parent::*//following-sibling::*[@class="view"]`
+    }
 
     public async navigateThroughPaginationUntilFindingText(text, maxPages: number){
         for(let i = 0; i < maxPages; i++){
@@ -23,7 +28,7 @@ export default new class PuppyList extends InteractivePage {
                 return true;
             } else {
                 try{
-                    await ElementActions.clickElement("next page button");
+                    await ElementActions.clickElement("next page pagination button");
                 } catch (err) {
                     console.error(`Text ${text} couldn't be found ` + err);
                     return false;
