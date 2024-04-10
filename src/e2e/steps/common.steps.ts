@@ -1,9 +1,17 @@
 import { When, Then } from '@wdio/cucumber-framework';
-import { ElementActions } from "../../utilities/ElementActions.js";
-import { Utils } from '../../utilities/Utils.js';
+import { ElementActions } from "../../utilities/elementActions.js";
+import { Utils } from '../../utilities/utils.js';
 
 When('I click {string}', async (selectorName: string) => {
     await ElementActions.clickElement(selectorName);
+});
+
+When('I type {string} into {string}', async (text: string, elementName: string) => {
+    await ElementActions.setElementText(elementName, text);
+});
+
+When('I select {string} from dropdown {string}', async (text: string, elementName: string) => {
+    await ElementActions.selectByAttribute(elementName, text);
 });
 
 Then('I see {string}', async (selectorName: string) => {

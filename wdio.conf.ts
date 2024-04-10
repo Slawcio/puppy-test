@@ -1,7 +1,7 @@
+import allureReporter from '@wdio/allure-reporter';
 import { Options } from '@wdio/types'
 import { browser } from '@wdio/globals'
-import { Environments } from './src/utilities/Environments.js';
-import allureReporter from '@wdio/allure-reporter';
+import { Environments } from './src/utilities/environments.js';
 
 const URL = Environments["PUPPY"];
 

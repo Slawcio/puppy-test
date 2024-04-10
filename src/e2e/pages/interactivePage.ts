@@ -1,6 +1,6 @@
 import { $, $$ } from "@wdio/globals";
 import { Selector } from 'webdriverio';
-import { Waits } from '../../utilities/Waits.js';
+import { Waits } from '../../utilities/waits.js';
 
 export abstract class InteractivePage {
 
@@ -41,7 +41,7 @@ export abstract class InteractivePage {
 
         const selector: Selector | undefined = this.locatorsMap.get(selectorName);
         if (!selector) {
-            throw new Error(`Selector not found for: ${selectorName}`);
+            throw new Error(`Selector name not found: ${selectorName}`);
         }
         return selector;
     }
