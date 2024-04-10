@@ -209,10 +209,10 @@ export const config: Options.Testrunner = {
     /**
      * Gets executed once before all workers get launched.
      * @param {Object} config wdio configuration object
-     * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onPrepare: function (config, capabilities) {
-    // },
+    onPrepare: function (config) {
+        console.log('Environment: ' + config.baseUrl);
+    },
     /**
      * Gets executed just before initialising the webdriver session and test framework. It allows you
      * to manipulate configurations depending on the capability or spec.
@@ -228,9 +228,8 @@ export const config: Options.Testrunner = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    before: (_capabilities, _specs) => {
-        console.log('Environment: ' + config.baseUrl);
-    },
+    // before: (_capabilities, _specs) => {
+    // },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name

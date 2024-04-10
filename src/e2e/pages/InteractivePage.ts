@@ -4,7 +4,7 @@ import { Waits } from '../../utilities/Waits.js';
 
 export abstract class InteractivePage {
 
-    protected abstract pageName: string | undefined;
+    protected abstract readonly pageName: string | undefined;
     protected abstract readonly locatorsMap: Map<string, Selector> | undefined;
 
     public getPageName() {
