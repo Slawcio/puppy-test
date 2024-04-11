@@ -18,7 +18,7 @@
 
     
 ## Description
-This project implements a unique Page Factory architecture, enhancing the standard Page Object Model (POM) framework for large-scale web automation projects. It focuses on reducing boilerplate code and improving maintainability and scalability.
+This project implements a unique Page Factory architecture, enhancing the standard Page Object Model (POM) framework for large-scale web automation projects. The project focuses on reducing boilerplate code and improving maintainability and scalability. Serving as a proof of concept, it currently has some vulnerabilities regarding the lack of automatic advice argument to step from IDE which is helpful sometimes for newcomers. Once these are resolved, it has the potential to become a powerful design solution for projects with a large number of pages.
 
 ## Key Features
 - Page Factory Architecture: Dynamically manages page objects, allowing for scalable and maintainable code structure.
