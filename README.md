@@ -12,8 +12,19 @@
 8. Adopt Brook and add a travel carrier, and verify that the total amount has increased by the price of the carrier
 9. Adopt Brook and Maggie Mae. Add a first vet visit and a collar and leash for Brook, and add a travel carrier for Maggie Mae. Complete the adoption with a credit card, and verify the adoption has been completed
 
+#### General outcomes
 - https://spartantest-puppies.herokuapp.com/ should be equipped with aut-id. Most pages does not have at at all.
-- 8. page above have an error. addons are not calculated to fee total price. Tests is failing as it should then.
+- 8th point - spartantest page above have an error. addons are not calculated to fee total price. Tests is failing as it should then.
+
+    
+## Description
+This project implements a unique Page Factory architecture, enhancing the standard Page Object Model (POM) framework for large-scale web automation projects. It focuses on reducing boilerplate code and improving maintainability and scalability.
+
+## Key Features
+- Page Factory Architecture: Dynamically manages page objects, allowing for scalable and maintainable code structure.
+- Enhanced Step Definitions: Utilizes common steps (I click {string}, I see {string}, etc.) integrated with a central ElementActions class for efficient element interactions.
+- Modular Design: Each page is represented by a distinct class derived from an InteractivePage base, facilitating easier updates and feature additions.
+- Locator Management: Implements an abstract locatorsMap in each page class, streamlining element selectors' management and usage.
 
 ## Preparation
 
