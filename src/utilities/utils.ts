@@ -1,6 +1,6 @@
 export class Utils {
 
-    public static async getConcatenatedText(elements: Array<WebdriverIO.Element>): Promise<string> {
+    public static async getConcatenatedText(elements: WebdriverIO.ElementArray): Promise<string> {
         let texts: string[] = [];
 
         for (const element of elements) {

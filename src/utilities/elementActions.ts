@@ -13,9 +13,10 @@ export class ElementActions {
 			throw new Error(`On Page: '${currentPage.getPageName()}' could find element: '${selectorName}' in locatorsMap`);
 	}
 
-	public static async getElements(selectorName: string): Promise<WebdriverIO.Element[]> {
+	public static async getElements(selectorName: string): Promise<WebdriverIO.ElementArray> {
 		const currentPage: InteractivePage = await PageFactory.getCurrentPage();
-		const resultElements: WebdriverIO.Element[] = await currentPage.getElements(selectorName);
+		const resultElements: WebdriverIO.ElementArray = await currentPage.getElements(selectorName);
+		// @ts-ignore
 		for (const element: WebdriverIO.Element of resultElements) {
 			await Waits.waitForElement(element);
 		}
