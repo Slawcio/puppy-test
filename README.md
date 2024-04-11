@@ -13,8 +13,8 @@
 9. Adopt Brook and Maggie Mae. Add a first vet visit and a collar and leash for Brook, and add a travel carrier for Maggie Mae. Complete the adoption with a credit card, and verify the adoption has been completed
 
 #### General outcomes
-- https://spartantest-puppies.herokuapp.com/ should be equipped with aut-id. Most pages does not have at at all.
-- 8th point - spartantest page above have an error. addons are not calculated to fee total price. Tests is failing as it should then.
+- https://spartantest-puppies.herokuapp.com/ should be equipped with aut-id. Most pages do not have them at at all.
+- 8th point - spartantest page above has an error. addons are not calculated to fee the total price. Test step is failing as it should then.
 
     
 ## Description
@@ -38,16 +38,16 @@ Run `npm ci` to install all dependencies.
 
 ## Configuring Environment
 
-Environment is predefined in baseUrl in wdio.conf.ts
+The environment is predefined in baseUrl in wdio.conf.ts
 
 ## Running tests
 
 Use Cucumber Tags to define what would you like to run.
-Tags can be used as logical expression eg. `"@myTag1 and @myTag2 or @myTag3 and not @myTag4"`
+Tags can be used as logical expressions eg. `"@myTag1 and @myTag2 or @myTag3 and not @myTag4"`
 
-Use command `npm run desktopTags "@puppy"` to run all desktop test using Cucumber Tags
+Use the command `npm run desktopTags "@puppy"` to run all desktop tests using Cucumber Tags
 
-Use command `npm run desktopTags "@sX"` to run specific scenario from 1-9 eg `@s5`
+Use the command `npm run desktopTags "@sX"` to run specific scenario from 1-9 eg `@s5`
 
 ## Debugging tests
 
