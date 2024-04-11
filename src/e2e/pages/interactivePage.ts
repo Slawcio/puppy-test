@@ -25,12 +25,12 @@ export abstract class InteractivePage {
     }
 
     public async getElement(selectorName: string): Promise<WebdriverIO.Element> {
-        const selector: Selector = await this.getSelector(selectorName);
+        const selector: Selector = this.getSelector(selectorName);
         return $(selector);
     }
 
-    public async getElements(selectorName: string): Promise<Array<WebdriverIO.Element>>{
-        const selector: Selector = await this.getSelector(selectorName);
+    public async getElements(selectorName: string){
+        const selector: Selector = this.getSelector(selectorName);
         return $$(selector);
     }
 

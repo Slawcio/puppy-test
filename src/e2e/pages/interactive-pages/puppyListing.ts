@@ -7,7 +7,7 @@ export default new class PuppyListing extends InteractivePage {
 
     private static puppyNames = ['Hanna', 'Twinkie', 'Spud', 'Maggie Mae', 'Brook'];
 
-    private static getPuppyDetails(puppyName: string): string[] {
+    private static getPuppyDetails(puppyName: string): [string, Selector] {
         const selectorName = `view details button for the puppy called ${puppyName}`;
         const selector = `//*[contains(text(),"${puppyName}")]/parent::*//following-sibling::*[@class="view"]`;
         return [selectorName, selector];
