@@ -47,7 +47,7 @@ Tags can be used as logical expressions eg. `"@myTag1 and @myTag2 or @myTag3 and
 
 Use the command `npm run desktopTags "@puppy"` to run all desktop tests using Cucumber Tags
 
-Use the command `npm run desktopTags "@sX"` to run specific scenario from 1-9 eg `@s5`
+Use the command `npm run desktopTags "@s[0-9]"` to run specific scenario from 1-9 eg `@s5`
 
 ## Debugging tests
 
