@@ -74,13 +74,12 @@ To open this report use `npm run openAllureReport`
 
 ````bash
 ├───src
-├───e2e
-│   ├───features
-│   ├───pages
-│   │   ├───interactive-pages
-│   └───steps
-├───utilities
-│   ├───page-factory
+│   ├───e2e
+│   │   ├───features
+│   │   ├───pages
+│   │   │   ├───interactive-pages
+│   │   └───steps
+│   ├───utilities
 └───types
 ````
 ## Further help
