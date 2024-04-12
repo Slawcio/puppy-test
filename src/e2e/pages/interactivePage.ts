@@ -1,6 +1,6 @@
 import { $, $$ } from "@wdio/globals";
 import { Selector } from 'webdriverio';
-import { Waits } from '../../utilities/waits.js';
+import { Waits } from '../../utilities/waits.ts';
 
 export abstract class InteractivePage {
 

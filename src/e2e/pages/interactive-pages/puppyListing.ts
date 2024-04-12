@@ -1,7 +1,7 @@
-import { InteractivePage } from "../interactivePage.js";
 import { Selector } from "webdriverio"
-import { Utils } from '../../../utilities/utils.js';
-import { ElementActions } from '../../../utilities/elementActions.js';
+import { InteractivePage } from "../interactivePage.ts";
+import { Utils } from '../../../utilities/utils.ts';
+import { ElementActions } from '../../../utilities/elementActions.ts';
 
 export default new class PuppyListing extends InteractivePage {
 

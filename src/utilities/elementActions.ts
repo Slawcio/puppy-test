@@ -1,6 +1,6 @@
-import {PageFactory} from '../e2e/pages/pageFactory.js';
-import {type InteractivePage} from '../e2e/pages/interactivePage.js';
-import {Waits} from './waits.js';
+import {type InteractivePage} from '../e2e/pages/interactivePage.ts';
+import { PageFactory } from '../e2e/pages/pageFactory.ts';
+import { Waits } from './waits.ts';
 
 export class ElementActions {
 

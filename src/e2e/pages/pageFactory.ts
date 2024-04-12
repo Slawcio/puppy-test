@@ -1,9 +1,9 @@
 import { browser } from "@wdio/globals";
-import { InteractivePage } from "./interactivePage.js";
-import puppyDetails from "./interactive-pages/puppyDetails.js";
-import puppyList from "./interactive-pages/puppyListing.js";
-import puppyAdoptionConfirmation from './interactive-pages/puppyAdoptionConfirmation.js';
-import puppyOrderForm from './interactive-pages/puppyOrderForm.js';
+import { InteractivePage } from "./interactivePage.ts";
+import puppyDetails from "./interactive-pages/puppyDetails.ts";
+import puppyList from './interactive-pages/puppyListing.ts';
+import puppyAdoptionConfirmation from './interactive-pages/puppyAdoptionConfirmation.ts';
+import puppyOrderForm from './interactive-pages/puppyOrderForm.ts';
 
 export class PageFactory {
 
