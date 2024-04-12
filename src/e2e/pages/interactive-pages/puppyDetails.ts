@@ -1,5 +1,5 @@
-import { InteractivePage } from "../interactivePage.js";
 import { Selector } from "webdriverio"
+import { InteractivePage } from "../interactivePage.ts";
 
 export default new class PuppyDetails extends InteractivePage {
 

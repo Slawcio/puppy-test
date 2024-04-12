@@ -1,5 +1,5 @@
 import { Given, When } from '@wdio/cucumber-framework';
-import puppyList from '../pages/interactive-pages/puppyListing.js';
+import puppyList from '../pages/interactive-pages/puppyListing.ts';
 
 Given('I am on puppy list page', async () => {
     await puppyList.open('/'); // could be parametrized in Common.steps if necessary

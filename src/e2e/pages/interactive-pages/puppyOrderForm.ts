@@ -1,5 +1,5 @@
-import { InteractivePage } from '../interactivePage.js';
 import { Selector } from 'webdriverio';
+import { InteractivePage } from '../interactivePage.ts';
 
 export default new (class PuppyOrderForm extends InteractivePage {
     protected readonly pageName: string = 'puppy order form page';

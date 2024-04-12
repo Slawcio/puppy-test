@@ -1,6 +1,6 @@
 import { When, Then } from '@wdio/cucumber-framework';
-import { ElementActions } from "../../utilities/elementActions.js";
-import { Utils } from '../../utilities/utils.js';
+import { ElementActions } from "../../utilities/elementActions.ts";
+import { Utils } from '../../utilities/utils.ts';
 
 When('I click {string}', async (selectorName: string) => {
     await ElementActions.clickElement(selectorName);
@@ -24,7 +24,7 @@ Then('I see element {string} displays text {string}', async (selectorName: strin
 });
 
 Then('I see elements {string} contains text {string}', async (selectorName, textToValidate) => {
-    const elements: Array<WebdriverIO.Element> = await ElementActions.getElements(selectorName);
+    const elements: WebdriverIO.ElementArray = await ElementActions.getElements(selectorName);
     expect(await Utils.getConcatenatedText(elements)).toContain(textToValidate);
 });
 
